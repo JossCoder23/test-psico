@@ -5,10 +5,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 0;
+    padding: 4rem 0;
+    row-gap: 3rem;
     h1 {
         margin: 0;
-        padding: 1rem 0;
+        color: black;
+        font-size: 2rem;
         span {
             color: v.$septimo;
         }
@@ -19,7 +21,6 @@
         text-align: center;
         font-size: 4rem;
         // background-color: red;
-        padding-top: 3rem;
         font-weight: 700;
     }
     p {
@@ -27,7 +28,6 @@
         width: 28rem;
         font-size: 1.4rem;
         text-align: center;
-        padding: 2rem 0;
     }
 }
 
@@ -53,6 +53,131 @@
     }
 }
 
+
 .bloque1Cards {
-    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3rem;
+}
+
+.bloque1Items {
+    width: 26rem;
+    height: 17rem;
+    // background-color: green;
+    overflow: hidden;
+    display: flex;
+    column-gap: 1rem;
+    box-shadow: -1px 2px 11px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 2px 11px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 2px 11px 0px rgba(0,0,0,0.75);
+    img {
+        width: 11rem;
+        transform: scale(.85);
+    }
+}
+
+.bloque1ItemsDesc {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 1rem 0;
+    row-gap: 1rem;
+    .bloque1ItemsDesc--fecha {
+        display: flex;
+        column-gap: 1rem;
+        img {
+            width: 2rem;
+        }
+        h4 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            color: rgb(56, 56, 56);
+        }
+    }
+    h3, h4 {
+        margin: 0;
+        color: gray;
+        font-weight: 500;
+    }
+    h3 {
+        color: black;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+}
+
+.bloque1ItemAnuncio {
+    width: 26rem;
+    height: auto;
+    // background-color: green;
+    overflow: hidden;
+    display: flex;
+    column-gap: 1rem;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 3rem 0;
+    background-color: v.$tercero;
+    box-shadow: -1px 2px 11px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 2px 11px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 2px 11px 0px rgba(0,0,0,0.75);
+    h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        span {
+            font-weight: 800;
+        }
+    }
+    .header__button {
+        // background-color: green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+            width: auto;
+            position: relative;
+            border: none;
+            background-color: v.$sexto;
+            box-shadow: 2px 3px 5px 0px rgba(250,67,106,0.75);
+            -webkit-box-shadow: 2px 3px 5px 0px rgba(250,67,106,0.75);
+            -moz-box-shadow: 2px 3px 5px 0px rgba(250,67,106,0.75);
+            border-radius: 1rem;
+            h3 {
+                margin: 0;
+                padding: .5rem 2rem;
+                font-size: 1.6rem;
+                color: white;
+            }
+            img {
+                position: absolute;
+                width: 3rem;
+                height: auto;
+                bottom: -1rem;
+                right: -1rem;
+                animation: latidos 1s infinite;
+            }
+        }
+    }
+}
+
+.bloque1ItemAnuncio--images {
+    display: flex;
+    // background-color: green;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: auto;   
+        position: relative;
+    }
+    .bloque1ItemAnuncio--images1 {
+        height: 10rem;
+        right: -.5rem;
+    }
+    .bloque1ItemAnuncio--images2 {
+        height: 3.5rem;
+        left: -.5rem;
+    }
 }
