@@ -9,10 +9,20 @@
   row-gap: 2rem;
   justify-content: center;
   align-items: center;
+  @include m.desktop_1020 {
+    padding: 5rem 4rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 3rem;
+  }
   h1 {
     margin: 0;
     color: white;
     font-weight: 500;
+    font-size: 2rem;
+    @include m.desktop_1020 {
+      font-size: 2.5rem;
+    }
   }
 }
 
@@ -22,5 +32,8 @@
   column-gap: 1rem;
   img {
     width: 3.5rem;
+    @include m.desktop_1020 {
+      width: 4rem;
+    }
   }
 }

@@ -8,20 +8,37 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 2rem 0;
+    @include m.desktop_1020 {
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 2rem;
+        overflow: hidden;
+        padding: 0;
+        justify-content: space-between;
+        padding-right: 2rem;
+    }
     img {
         width: 20rem;
         height: auto;
+        @include m.desktop_1020 {
+            width: 30rem;
+        }
     }
     h3 {
         text-align: center;
         font-size: 1.5rem;
         font-weight: 600;
+        @include m.desktop_1020 {
+            text-align: start;
+        }
         span {
             font-weight: 800;
         }
     }
     .header__button {
         // background-color: green;
+        display: flex;
+        justify-content: center;
         button {
             width: auto;
             position: relative;
@@ -48,3 +65,24 @@ header {
         }
     }
 }
+
+.desktopContainer {
+    @include m.desktop_1020 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        row-gap: 1rem;
+        h3 {
+            margin: 0;
+        }
+    }
+}
+
+.headerImageDesktop {
+    display: none;
+    @include m.desktop_1020 {
+        display: block;  
+        width: 30rem; 
+    }
+} 

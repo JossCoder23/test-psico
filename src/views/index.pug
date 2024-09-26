@@ -26,64 +26,135 @@ html(lang="es")
         link(href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
     body
         header
+            img.headerImageDesktop(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/image_desktop-scaled.webp", alt="")
             img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/logo_top-scaled.webp", alt="")
-            h3 Descubre tu perfil
-                br
-                | psicológico en 
-                span  5 preguntas
-            .header__button
-                button
-                    h3 Empezar
-                    img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/click.webp", alt="")
+            .desktopContainer
+                h3 Descubre tu perfil
+                    br
+                    | psicológico en 
+                    span  5 preguntas
+                .header__button
+                    button
+                        h3 Empezar
+                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/click.webp", alt="")
         .bloque1
-            h1 datos
-                span psicologicos
-                | .pe
-            h2 Blog de Psicología
-            p Generamos contenido exclusivo junto a expertos en Psico-Bienestar Integral, pensado especialmente para ti.
-            .bloque1Opciones 
-                h3.bloque1Options Todas 
-                h3 Noticias 
-                h3 Salud mental 
-                h3 Bienestar 
-                h3 Curiosidades
-            .bloque1Cards
-                .bloque1Items
-                    img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/item_image1.webp", alt="")
-                    .bloque1ItemsDesc
-                        .bloque1ItemsDesc--fecha
-                            img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/icon_fecha.webp", alt="")
-                            h4 7-04-24
-                        h3 Especialistas crean un test que vela tu personalidad al instante
-                        h4 Ingresa el test y descubre tu peril psicológico en tan solo 5 preguntas.
-                .bloque1Items
-                    img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/item_image2.webp", alt="")
-                    .bloque1ItemsDesc
-                        .bloque1ItemsDesc--fecha
-                            img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/icon_fecha.webp", alt="")
-                            h4 7-04-24
-                        h3 ¿No sabes que tipo de terapia elegir?
-                        h4 Esta guía te ayudará a encontrar lo mejor para ti.
-                .bloque1Items
-                    img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/item_image3.webp", alt="")
-                    .bloque1ItemsDesc
-                        .bloque1ItemsDesc--fecha
-                            img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/icon_fecha.webp", alt="")
-                            h4 7-04-24
-                        h3 ¿Amigo o psicólogo?
-                        h4 Descubre porque un psicólogo puede marcar la diferencia.
-                .bloque1ItemAnuncio
-                    .bloque1ItemAnuncio--images 
-                        img.bloque1ItemAnuncio--images1(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/inmedia_graph.webp", alt="")
-                        img.bloque1ItemAnuncio--images2(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/logo_top-scaled.webp", alt="")
-                    h3 Descubre tu perfil
-                        br
-                        | psicológico en 
-                        span  5 preguntas
-                    .header__button
-                        button
-                            h3 Empezar
-                            img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/click.webp", alt="")
+            .bloque1Container
+                h1 datos
+                    span psicologicos
+                    | .pe
+                h2 Blog de Psicología
+                p Generamos contenido exclusivo junto a expertos en Psico-Bienestar Integral, pensado especialmente para ti.
+                .bloque1Opciones#bloque1Opciones  
+                    h3.btn.bloque1Options(onclick="filterSelection('all')") Todas 
+                    h3.btn(onclick="filterSelection('noticias')") Noticias 
+                    h3.btn(onclick="filterSelection('mental')") Salud mental 
+                    h3.btn(onclick="filterSelection('bienestar')") Bienestar 
+                    h3.btn(onclick="filterSelection('curiosidades')") Curiosidades
+                .bloque1Cards
+                    .bloque1Items.noticias
+                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/item_image1.webp", alt="")
+                        .bloque1ItemsDesc
+                            .bloque1ItemsDesc--fecha
+                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/icon_fecha.webp", alt="")
+                                h4 7-04-24
+                            h3 Especialistas crean un test que vela tu personalidad al instante
+                            h4 Ingresa el test y descubre tu peril psicológico en tan solo 5 preguntas.
+                    .bloque1Items.mental
+                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/item_image2.webp", alt="")
+                        .bloque1ItemsDesc
+                            .bloque1ItemsDesc--fecha
+                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/icon_fecha.webp", alt="")
+                                h4 7-04-24
+                            h3 ¿No sabes que tipo de terapia elegir?
+                            h4 Esta guía te ayudará a encontrar lo mejor para ti.
+                    .bloque1Items.bienestar
+                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/item_image3.webp", alt="")
+                        .bloque1ItemsDesc
+                            .bloque1ItemsDesc--fecha
+                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/icon_fecha.webp", alt="")
+                                h4 7-04-24
+                            h3 ¿Amigo o psicólogo?
+                            h4 Descubre porque un psicólogo puede marcar la diferencia.
+                    .bloque1Items.curiosidades
+                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/item_image1.webp", alt="")
+                        .bloque1ItemsDesc
+                            .bloque1ItemsDesc--fecha
+                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/icon_fecha.webp", alt="")
+                                h4 7-04-24
+                            h3 Especialistas crean un test que vela tu personalidad al instante
+                            h4 Ingresa el test y descubre tu peril psicológico en tan solo 5 preguntas.
+                    .bloque1Items.noticias
+                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/item_image2.webp", alt="")
+                        .bloque1ItemsDesc
+                            .bloque1ItemsDesc--fecha
+                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/icon_fecha.webp", alt="")
+                                h4 7-04-24
+                            h3 ¿No sabes que tipo de terapia elegir?
+                            h4 Esta guía te ayudará a encontrar lo mejor para ti.
+                    .bloque1Items.mental
+                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/item_image3.webp", alt="")
+                        .bloque1ItemsDesc
+                            .bloque1ItemsDesc--fecha
+                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/icon_fecha.webp", alt="")
+                                h4 7-04-24
+                            h3 ¿Amigo o psicólogo?
+                            h4 Descubre porque un psicólogo puede marcar la diferencia.
+                    .bloque1ItemAnuncio
+                        .bloque1ItemAnuncio--images 
+                            img.bloque1ItemAnuncio--images1(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/inmedia_graph.webp", alt="")
+                            img.bloque1ItemAnuncio--images2(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/logo_top-scaled.webp", alt="")
+                        h3 Descubre tu perfil
+                            br
+                            | psicológico en 
+                            span  5 preguntas
+                        .header__button
+                            button
+                                h3 Empezar
+                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/click.webp", alt="")
+                script.
+                    filterSelection("all")
+                    function filterSelection(c) {
+                    var x, i;
+                    x = document.getElementsByClassName("bloque1Items");
+                    if (c == "all") c = "";
+                    console.log(x)
+                    for (i = 0; i < x.length; i++) {
+                        w3RemoveClass(x[i], "show");
+                        //- console.log(x[i])
+                        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                    }
+                    }
+                    
+                    function w3AddClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                    }
+                    }
+                    
+                    function w3RemoveClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        while (arr1.indexOf(arr2[i]) > -1) {
+                        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                        }
+                    }
+                    element.className = arr1.join(" ");
+                    }
+                    // Add active class to the current button (highlight it)
+                    var btnContainer = document.getElementById("bloque1Opciones");
+                    var btns = btnContainer.getElementsByClassName("btn");
+                    for (var i = 0; i < btns.length; i++) {
+                    btns[i].addEventListener("click", function(){
+                        var current = document.getElementsByClassName("bloque1Options");
+                        current[0].className = current[0].className.replace(" bloque1Options", "");
+                        this.className += " bloque1Options";
+                    });
+                    }
         .bloque2
             h1 datospsicologicos.pe
             .bloque2Icons 
